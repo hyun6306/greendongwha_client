@@ -84,10 +84,10 @@ export default {
 						title: '마루스타그램',
 						to: '/community/instagram',
 					},
-					{
-						title: '동화s Pick',
-						to: '/community/pick',
-					},
+					// {
+					// 	title: '동화s Pick',
+					// 	to: '/community/pick',
+					// },
 					{
 						title: '이벤트',
 						to: '/community/event',
