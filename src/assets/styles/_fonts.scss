@@ -1,0 +1,227 @@
+$font-dir: '~@/assets/fonts';
+
+// Roboto
+@font-face {
+    font-family: 'Roboto';
+    src: url('#{$font-dir}/Roboto-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-display: block;
+}
+@font-face {
+    font-family: 'Roboto-Black';
+    src: url('#{$font-dir}/Roboto-Black.ttf') format('truetype');
+    font-style: normal;
+    font-display: block;
+}
+@font-face {
+    font-family: 'Roboto-BlackItalic';
+    src: url('#{$font-dir}/Roboto-BlackItalic.ttf') format('truetype');
+    font-style: normal;
+    font-display: block;
+}
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('#{$font-dir}/Roboto-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-display: block;
+}
+@font-face {
+    font-family: 'Roboto-Black';
+    src: url('#{$font-dir}/Roboto-BoldItalic.ttf') format('truetype');
+    font-style: normal;
+    font-display: block;
+}
+@font-face {
+    font-family: 'Roboto-Italic';
+    src: url('#{$font-dir}/Roboto-Italic.ttf') format('truetype');
+    font-style: normal;
+    font-display: block;
+}
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url('#{$font-dir}/Roboto-Light.ttf') format('truetype');
+    font-style: normal;
+    font-display: block;
+}
+@font-face {
+    font-family: 'Roboto-LightItalic';
+    src: url('#{$font-dir}/Roboto-LightItalic.ttf') format('truetype');
+    font-style: normal;
+    font-display: block;
+}
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url('#{$font-dir}/Roboto-Medium.ttf') format('truetype');
+    font-style: normal;
+    font-display: block;
+}
+@font-face {
+    font-family: 'Roboto-MediumItalic';
+    src: url('#{$font-dir}/Roboto-MediumItalic.ttf') format('truetype');
+    font-style: normal;
+    font-display: block;
+}
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('#{$font-dir}/Roboto-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-display: block;
+}
+@font-face {
+    font-family: 'Roboto-Thin';
+    src: url('#{$font-dir}/Roboto-Thin.ttf') format('truetype');
+    font-style: normal;
+    font-display: block;
+}
+@font-face {
+    font-family: 'Roboto-ThinItalic';
+    src: url('#{$font-dir}/Roboto-ThinItalic.ttf') format('truetype');
+    font-style: normal;
+    font-display: block;
+}
+
+
+// Noto Sans
+@font-face {
+    font-family: 'NotoSansKR';
+    src: url('#{$font-dir}/NotoSansKR-Regular.otf') format('opentype');
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'NotoSansKR-Black';
+    src: url('#{$font-dir}/NotoSansKR-Black.otf') format('opentype');
+    font-style: normal;
+    font-display: block;
+}
+@font-face {
+    font-family: 'NotoSansKR-Bold';
+    src: url('#{$font-dir}/NotoSansKR-Bold.otf') format('opentype');
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'NotoSansKR-Regular';
+    src: url('#{$font-dir}/NotoSansKR-Regular.otf') format('opentype');
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'NotoSansKR-Light';
+    src: url('#{$font-dir}/NotoSansKR-Light.otf') format('opentype');
+    font-style: normal;
+    font-display: block;
+}
+@font-face {
+    font-family: 'NotoSansKR-Medium';
+    src: url('#{$font-dir}/NotoSansKR-Medium.otf') format('opentype');
+    font-style: normal;
+    font-display: block;
+}
+
+// Montserrat
+@font-face {
+    font-family: 'Montserrat-ThinItalic';
+    src: url('#{$font-dir}/Montserrat-ThinItalic.ttf') format('truetype');
+    font-style: normal;
+    font-display: block;
+}
+
+// 나눔 명조
+@font-face {
+    font-family: 'NanumMyeongjo';
+    src: url('#{$font-dir}/NanumMyeongjo.otf') format('opentype'),
+         url('#{$font-dir}/NanumMyeongjo.ttf') format('truetype');
+    font-style: normal;
+    font-display: block;
+}
+
+// Lucida Bright Demibold Italic
+@font-face {
+    font-family: 'Lucida-Bright';
+    src: url('#{$font-dir}/Lucida Bright Demibold Italic.ttf') format('truetype');
+    font-style: normal;
+    font-display: block;
+}
+
+
+// font-size
+$font-size-x-small: 0.8rem;
+$font-size-small: 0.9rem;
+$font-size-normal: 1rem;
+
+$font-size-large: 1.5rem;
+$font-size-x-large: 2rem;
+$font-size-xx-large: 2.3rem;
+
+$font_xs: 0.72rem; // 10
+$font_sm: 0.853rem; // 12
+$font_mid: 0.923rem; // 13
+$font_normal: 1rem; //14
+$font_lg: 1.136rem; //16
+$font_xl: 1.1278rem; //18
+$font__sub_tit: 1.42rem; //20
+$font_tit:1.704rem; //24
+
+.font12{font-size:12px !important;}
+.font13{font-size:13px !important;}
+.font14{font-size:14px !important;}
+.font15{font-size:15px !important;}
+.font16{font-size:16px !important;}
+
+// font-weight
+$fw_bold:700;
+$fw_regular:500;
+$fw_normal:400;
+
+.fw_bold{font-weight:bold;}
+.fw_normal{font-weight:normal;}
+
+//font-letterspacing
+$fl_half:-0.5px;
+$fl_1:-1px;
+.fl_half{letter-spacing:-0.5px;}
+.fl_1{letter-spacing:-1px;}
+
+// word-brek
+$wb-keep:keep-all;
+.wb-keep{word-break:keep-all;}
+
+// 컨텐츠 타이틀
+.content_title{
+    padding:40px 0 !important;
+    font-size:$font_tit !important;
+    font-weight:$fw_bold;
+    color:#262626;
+    line-height:1.2;
+    .sub_title{
+        margin-top:20px !important;
+        font-size:$font__sub_tit !important;
+        font-weight: $fw_normal !important;
+        color:#666 !important;
+        word-break:keep-all;
+    }
+}
+@media all and (min-width:769px) and (max-width:980px){
+    .content_title{
+        font-size: $font__sub_tit !important;
+        .sub_title{
+            margin-top:16px !important;
+            font-size:$font_xl !important;
+        }
+    }
+}
+@media all and (max-width:768px){
+    .content_title{
+        padding:30px 0 !important;
+        font-size: $font_xl !important;
+        .sub_title{
+            margin-top:15px !important;
+            font-size:$font_normal !important;
+        }
+    }
+}
+
+
+
+

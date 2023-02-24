@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Sitemap:https://www.greendongwha.com/sitemap.xml
+Sitemap:https://www.greendongwha.com/housewarming/3d/detail/sitemap.xml
+Sitemap:https://www.greendongwha.com/housewarming/specialist/detail/sitemap.xml
+Sitemap:https://www.greendongwha.com/product/detail/sitemap.xml
+Sitemap:https://www.greendongwha.com/community/knowHow/detail/sitemap.xml
+Sitemap:https://www.greendongwha.com/community/event/detail/sitemap.xml

@@ -1,0 +1,115 @@
+<template>
+	<v-tabs
+		v-model="model"
+		active-class="tab_active"
+		color="primary"
+		hide-slider
+		center-active
+		:grow="grow"
+		:class="className"
+	>
+		<v-tab
+			v-for="(item, i) in tabItems"
+			:key="i"
+			class="px-0 px-md-8"
+		>
+			<div v-if="item.number">
+				<p>{{ item.number }}</p>
+				<p>{{ item.text }}</p>
+			</div>
+			<div v-else-if="item.title">
+				<p>{{ item.title }}</p>
+			</div>
+			<div v-else>
+				<p>{{ item }}</p>
+			</div>
+		</v-tab>
+	</v-tabs>
+</template>
+
+<script>
+import model from '@/mixins/model'
+
+export default {
+	name: 'TypeTab04',
+	components: {},
+	mixins: [model],
+	props: {
+		tabItems: {
+			type: Array,
+			default: () => [],
+		},
+		className: {
+			type: String,
+			default: '',
+		},
+		grow: {
+			type: Boolean,
+			default: true,
+		},
+	},
+	data: () => ({}),
+	computed: {},
+	watch: {},
+	created() {},
+	mounted() {},
+	methods: {},
+}
+</script>
+<style scoped lang="scss">
+.v-tabs {
+	:deep(.v-slide-group__prev) {
+		display: none !important;
+	}
+	.v-tab {
+		position: relative;
+		border-right: 1px solid #ccc;
+		border-top: 1px solid #ccc;
+		border-bottom: 1px solid #ccc;
+		background: $color_gray3;
+		&:first-child {
+			border-left: 1px solid #ccc;
+		}
+		p {
+			font-weight: $fw_regular;
+			font-size: $font_lg;
+			color: $color_gray2 !important;
+			word-break: keep-all;
+		}
+	}
+
+	.tab_active.v-tab {
+		background: white;
+		border-top: 2px solid $color_gray1;
+		border-bottom: 0;
+		p {
+			font-weight: $fw_bold !important;
+			color: $color_font !important;
+			font-weight: bold;
+		}
+		&:first-child {
+			border-left: 1px solid #ccc;
+		}
+		&:last-child {
+			border-right: 1px solid #ccc;
+		}
+	}
+}
+
+.full_border {
+	.v-tabs {
+		border-top: 2px solid $color_gray1;
+	}
+}
+
+@media all and (max-width: 600px) {
+	.v-tabs {
+		.v-tab {
+			p {
+				font-weight: $fw_normal;
+				font-size: $font_normal;
+			}
+		}
+	}
+}
+</style>

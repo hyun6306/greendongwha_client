@@ -1,0 +1,424 @@
+@import 'colors';
+@import 'fonts';
+
+html,
+body {
+    font-size: 14px;
+    overscroll-behavior-y: contain;
+    -webkit-text-size-adjust: none;
+    -webkit-touch-callout: auto; /* iOS Safari */
+    -webkit-user-select: auto; /* Safari */
+    -moz-user-select: auto; /* Old versions of Firefox */
+    -ms-user-select: auto; /* Internet Explorer/Edge */
+    user-select: auto; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+* {
+    font-family: 'NotoSansKR';
+    letter-spacing: -0.5px;
+    p {margin-bottom: 0 !important;}
+}
+// loading_area
+.loading_area {
+  width: 100%;
+  padding-top: 5rem;
+}
+
+// iframe
+iframe{
+  border:0 !important;
+  display: block !important;
+}
+
+// clickCursor
+.clickCursor{
+    cursor: pointer;
+}
+
+// ',' 자동생성
+.text_array:after{
+    content:',';
+}
+.text_array:last-child:after{
+    content: '';
+}
+
+// 화면 전체레이아웃 너비제어
+.w100{width:100%;}
+.wrapper{
+    max-width:1280px !important;
+	margin: 0 auto !important;
+}
+.inner_wrapper{max-width:840px !important;}
+.tal{text-align:left;}    // 왼쪽정렬
+.tac{text-align:center;}  // 중앙정렬
+.tar{text-align:right;}   // 오른쪽정렬
+.layout_align{margin:0 auto;} // 레이아웃 가운데정렬
+.card_align{margin:0 -1% !important;} //카드간격정렬
+.tawr{text-align: -webkit-right !important;}
+
+.background_gray {
+  background-color: #f7f7f7 !important;
+}
+
+
+.v-item-group {
+  background-color: transparent !important;
+}
+
+// search table
+.search_tag{
+  border:1px solid #ccc;
+  //border-radius:5px;
+  .search_zone{
+    //border-bottom:1px solid #ccc;
+  }
+  .tag_zone{
+    .tag{
+      display: inline-block;
+      background-color:#e3f0ea;
+      border-radius:50px;
+    }
+  }
+}
+
+// 테이블 (기본형)
+.table_type01{
+	.pc_only{display:block;}
+	font-size:15px !important;
+	color:#262626 !important;
+    border-top: 1px solid #ccc;
+    background-color:#fff !important;
+	.th{
+		padding:14px !important;
+		font-family:'NotoSansKR-Medium' !important;
+		background-color:#f8f8f8 !important;
+		border-bottom:1px solid #ccc;
+		text-align:start !important;
+	}
+	.td{
+        &.tit{color:#777 !important;}
+		padding:14px !important;
+		font-family: 'NotoSansKR-Regular' !important;
+		border-bottom:1px solid #ccc !important;
+		word-break:keep-all;
+		ul li{
+            position:relative !important;
+			list-style:none !important;
+			line-height:1.5 !important;
+			padding-left:10px !important;
+			&::before{
+                position:absolute !important;
+				left:0 !important;
+				content:'-' !important;
+			}
+		}
+	}
+    &.tb_gr{border-top:1px solid #ccc !important;}
+    .th_bt{background-color:transparent !important;}
+	.bc_tr{border-bottom:none !important;}
+    .bc_gr{border-bottom:1px solid #ccc !important;}
+}
+@media all and (max-width:767px){
+    .table_type01{
+		font-size:12px !important;
+		.pc_only{display:none;}
+		.th{padding:10px !important;}
+		.td{padding:10px !important;}
+	}
+}
+
+// 등록하기 테이블
+.register {
+    .body {
+        // 테이블규칙
+        .table {
+            font-family:'NotoSansKR-Regular' !important;
+            font-size:1.136rem !important;
+            color:#262626 !important;
+            .th {
+                position:relative !important;
+                font-family:'NotoSansKR-Regular' !important;
+                font-size:1.136rem !important;
+                font-weight:600;
+                color:#262626;
+                line-height: 1.0 !important;
+                span {
+                    font-size:0.923rem !important;
+                }
+                .required:after {
+                    position:absolute !important;
+                    top:0;
+                    color:#fa2a6f !important;
+                    content:"*" !important;
+                }
+            }
+            .td {
+                font-family: 'NotoSansKR-Regular';
+                font-size:1.065rem !important;
+                color:#777;
+                .notice {
+                    font-size:13px !important;
+                    color:#777 !important;
+                    line-height:1.5 !important;
+                }
+            }
+        }
+
+        // 기본회원정보
+        .basic_info {
+            .desc {
+                text-align:start !important;
+                margin-bottom:28px;
+                .tit {
+                    font-family:'NotoSansKR-Bold' !important;
+                    font-size:20px !important;
+                    color: #262626 !important;
+                }
+                .tip {
+                    display:inline-block;
+                    font-family:'NotoSansKR-Regular' !important;
+                    font-size: 13px !important;
+                    color: #777 !important;
+                }
+            }
+        }
+    }
+}
+@media all and (max-width:767px){
+    .register{
+        .body{
+            .table {
+                font-size:13px !important;
+                .th {
+                    font-size:13px !important;
+                    span {font-size:13px !important;}
+                }
+                .td {
+                    font-size:13px !important;
+                    .notice {font-size:13px !important;}
+                }
+            }
+            .basic_info{
+                .desc{
+                    margin-bottom:20px !important;
+                    float:unset;
+                    .tit{font-size:16px !important;}
+                }
+                &.tip{
+                    padding-left:0 !important;
+                    font-size:12px
+                }
+            }
+            .input_area{
+                table{
+                    th{
+                        display:table-row;
+                        p{display:inline-block;}
+                        span{padding-left:10px;}
+                        .required:after{top:0px;}
+                    }
+                    td{display:table-row;}
+                }
+            }
+        }
+    }
+}
+
+// 로그인 : sns로그인
+.sns_join{
+    font-family:'NotoSansKR-Regular' !important;
+    font-size:13px !important;
+}
+
+// 로그인 : 아이디찾기, 비밀번호찾기
+.msg_box {
+    min-height:120px;
+    padding:40px 0;
+    font-family:'NotoSansKR-Regular' !important;
+    color:#5f6061 !important;
+    line-height:1.5 !important;
+    background-color:#f8f8f8;
+    strong {color: #262626 !important;}
+}
+
+// 특징 타이틀
+.feature_tit{
+    text-align:center !important;
+    box-shadow:none !important;
+    background-color:transparent !important;
+    border-radius:0 !important;
+    border-bottom:2px solid #262626 !important;
+    word-break:keep-all !important;
+	p{
+		font-family:'NotoSansKR-Bold'!important;
+		font-size:24px !important;
+        color:#262626;
+	}
+	span{
+		font-family:'NotoSansKR-Regular' !important;
+		font-size: 14px !important;
+		color:#5f6062 !important;
+	}
+	&.bc_tr{border-bottom:transparent !important;}
+}
+.feature_table{
+    .item{
+        &.bc_tr{border-bottom:1px solid transparent !important;}
+        border-top:1px solid #ccc !important;
+        .tit{
+            font-family:'NotoSansKR-Bold' !important;
+            font-size:18px !important;
+            color:#262626;
+        }
+        .text{
+            font-family: 'NotoSansKR-Regular' !important;
+            font-size: 15px !important;
+            color:#262626;
+            word-break:keep-all !important;
+        }
+    }
+}
+@media all and (max-width:767px){
+    .feature_tit{
+		p{font-size: 18px !important;}
+		span{font-size: 12px !important;}
+	}
+}
+@media all and (max-width:380px){
+    .feature_table{
+        .icon{
+            width:60px !important;
+            height: 60px !important;
+        }
+        .item{
+            .tit{font-size:15px !important;}
+            .text{font-size:12px !important;}
+        }
+    }
+}
+
+// 고객센터: 단락스타일
+.graf{
+    h3{
+        font-family:'NotoSansKR-Bold' !important;
+        font-size:22px !important;
+        text-align:start !important;
+    }
+    p{
+        font-family:'NotoSansKR-Regular' !important;
+        font-size:16px !important;
+        line-height:1.5 !important;
+        text-align:start !important;
+    }
+}
+@media all and (max-width:767px){
+    .graf{
+        h3{font-size:16px !important;}
+        p{font-size:12px !important;}
+    }
+}
+
+// 마이페이지 상세보러가기 영역
+.history_bar{
+	border-bottom:1px solid #262626 !important;
+	.tit{
+		font-family:'NotoSansKR-Bold' !important;
+		font-size:18px !important;
+		color:#262626;
+	}
+}
+@media all and (max-width:600px){
+	.history_bar{
+		.tit{font-size:15px !important;}
+	}
+}
+
+// 제품 검색박스
+.select_box_area {
+  overflow: auto;
+  height: 40px;
+  display: inline-flex;
+  max-width: 100%;
+  white-space: nowrap;
+  // 스크롤 보이기 제거
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &_items {
+    min-width: 120px;
+  }
+}
+// 스크롤 보이기 제거
+.select_box_area::-webkit-scrollbar {
+  display: none !important; /* Chrome, Safari, Opera*/
+}
+
+// 관리자 페이지
+.admin_table {
+  &_area {
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+  }
+}
+
+.admin_grid{
+  &_contents {
+    font-family: 'NotoSansKR-Regular';
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    table-layout: fixed;
+
+    /* 여러 줄 자르기 추가 스타일 */
+    white-space: normal;
+    line-height: 1.2;
+    height: 1.3em;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+  &_text {
+    font-family: 'NotoSansKR-Regular';
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    table-layout: fixed;
+  }
+}
+
+
+//////////////////////////////////////////// @mixin
+//////////////////////////////////////////// @mixin
+
+// 한줄이상 (...)처리
+@mixin ellipsis {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// 한줄이상 (...)처리
+@mixin ellipsis_1 {
+  display: -webkit-box !important;
+  word-wrap: break-word !important;
+  -webkit-line-clamp: 1 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+// 두줄이상 (...)처리
+@mixin ellipsis_2 {
+  display: -webkit-box !important;
+  word-wrap: break-word !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+
+
