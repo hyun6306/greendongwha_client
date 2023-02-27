@@ -234,6 +234,10 @@ export default {
 							title: '동화 소식',
 							to: '/custom/notice',
 						},
+						{
+							title: 'NewPage',
+							to: '/site/newpage',
+						},
 					],
 				}
 			}

@@ -35,6 +35,12 @@ export const site = [
 				component: () => import(/* webpackChunkName: "Site_Certificate" */ '@/views/site/certificate.vue'),
 				meta: { title: '인증서/시험성적서' },
 			},
+			{
+				path: '/site/newpage',
+				name: 'Site_NewPage',
+				component: () => import(/* webpackChunkName: "Site_Brand" */ '@/views/site/newpage.vue'),
+				meta: { title: '신규페이지' },
+			},
 		],
 	},
 ]
